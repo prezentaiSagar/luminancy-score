@@ -61,9 +61,13 @@
     return luminance;
   }
 
-  (RGBObject.prototype.rgba2rgb = function (r) {
-    var o = r.a;
-    return new RGBObject((1 - o) * this.r + o * r.r, (1 - o) * this.g + o * r.g, (1 - o) * this.b + o * r.b);
+  (RGBObject.prototype.rgba2rgb = function (colorObject) {
+    const alpha = colorObject.a;
+    return new RGBObject(
+      (1 - alpha) * this.r + alpha * colorObject.r,
+      (1 - alpha) * this.g + alpha * colorObject.g,
+      (1 - alpha) * this.b + alpha * colorObject.b
+    );
   }),
     $('#bg_colorpicker').spectrum({
       color: 'rgb(255,255,255)',
