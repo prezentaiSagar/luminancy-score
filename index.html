@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RGBA to RGB converter</title>
+    <link rel="stylesheet" href="/assets/css/base.css?v=1.8.5" />
+
+    <link rel="stylesheet" href="/assets/lib/theme-light.min.css" media="(prefers-color-scheme: light)" />
+    <link rel="stylesheet" href="/assets/lib/theme-dark.min.css" media="(prefers-color-scheme: dark)" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper tool">
+      <h1>Prezent TC - Luminancy Score</h1>
+
+      <div class="intro">
+        <p>
+          Convert a RGBA color like <code>rgba(0,0,255,0.5)</code> to a RGB hex value that takes the alpha channel into
+          account.
+        </p>
+      </div>
+
+      <div class="input">
+        <table>
+          <tbody>
+            <tr>
+              <td>RGB background</td>
+              <td><input id="bg_colorpicker" /></td>
+              <td><code id="bg_value">N/A</code></td>
+            </tr>
+            <tr>
+              <td>RGBA foreground</td>
+              <td><input id="rgba_colorpicker" /></td>
+              <td><code id="rgba_value">N/A</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="output">
+        <h2>Output</h2>
+        <p>
+          <span id="output_block"></span>
+          <code id="output_value">N/A</code>
+        </p>
+        <table>
+          <tr>
+            <td>
+              <div id="rgba_view"><span>RGBA color</span></div>
+            </td>
+            <td>
+              <div id="join_view"><span>RGBA foreground on RGB background</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
+      <script src="assets/js/script.js"></script>
+    </div>
+
+    <script src="/assets/lib/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80K3VGWK1J"></script>
+  </body>
+</html>
